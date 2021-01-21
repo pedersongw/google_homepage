@@ -11,7 +11,7 @@ html body {
 main {
     position: relative;
     height: 100vh;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     overflow: hidden;
     display: block;
     box-sizing: border-box;
@@ -109,6 +109,10 @@ border: 1px solid;
 border-color: lightgray;
 padding: 0 50px;
 }
+#search:hover {
+    box-shadow: 0 0 5px 1px rgb(223, 223, 223);
+    border: none;
+}
 input:focus {
     outline: none;
 }
@@ -142,6 +146,9 @@ button {
     color: #3c4043;
     font-family: Roboto;
 }
+button:hover {
+    border: 1px solid #dadce0;
+}
 #button-search {
 margin-right: 5px;
 }
@@ -167,6 +174,40 @@ margin-left: 5px;
 }
 .footer-nav {
     display: flex;
+}
+#nav3 a {
+    white-space: nowrap;
+}
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column-reverse;
+        height: 60px;
+        box-sizing: border-box;
+    }
+    main {
+        padding-bottom: 60px;
+    }
+    #nav3-wrapper, #nav4-wrapper {
+        width: 100%;
+        justify-content: center;
+        height: 30px;
+    }
+    #nav3 a, #nav4 a {
+       padding: 0;
+    }
+    #nav3 ul, #nav4 ul {
+        justify-content: space-evenly;
+        width: 50%;
+        min-width: 300px;
+        align-self: center;
+        align-items: center;
+    }
+    #nav3, #nav4 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 30px;
+    }
 }
 </style>
     </head>
