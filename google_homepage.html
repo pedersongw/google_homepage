@@ -1,5 +1,5 @@
 <html>
-    <head>
+<head>
         <title>Google Homepage</title>
         <script src="https://kit.fontawesome.com/23b3e6bf4c.js" crossorigin="anonymous"></script>
 <style>
@@ -45,6 +45,8 @@ nav ul {
     margin: 0;
     display: flex;
     align-items: center;
+}
+.header-nav ul {
     height: 50px;
 }
 #nav1-wrapper, #nav2-wrapper {
@@ -125,12 +127,13 @@ input:focus {
     left: 18px;
     font-size: 15px;
 }
-#mic-icon {
+#mic-wrapper {
     position: absolute;
     top: 44px;
     left: 445px;
-    font-size: 18px;
-
+}
+#mic-icon {
+    width: 14px;
 }
 #button-wrapper {
     text-align: center;
@@ -197,10 +200,7 @@ margin-left: 5px;
     }
     #nav3 ul, #nav4 ul {
         justify-content: space-evenly;
-        width: 50%;
         min-width: 300px;
-        align-self: center;
-        align-items: center;
     }
     #nav3, #nav4 {
         width: 100%;
@@ -209,6 +209,7 @@ margin-left: 5px;
         height: 30px;
     }
 }
+
 </style>
     </head>
     <body>
@@ -238,7 +239,7 @@ margin-left: 5px;
         <div id="search-wrapper">
             <div id="search-icon" class="icon"><i class="fas fa-search"></i></div>
             <input id="search" type="text">
-            <div id="mic-icon" class="icon"><i class="fas fa-microphone"></i></div>
+            <div id="mic-wrapper" class="icon"><img id="mic-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/712px-Google_mic.svg.png"></div>
         </div>
         <div id="button-wrapper">
             <button id="button-search" type="button">Google Search</button>
