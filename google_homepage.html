@@ -7,7 +7,6 @@
 html body {
     padding: 0;
     margin: 0;
-    font-family: Roboto;
 }
 main {
     position: relative;
@@ -19,7 +18,10 @@ main {
 }
 header {
     height: 50px;
-    background-color: lightgray;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
 }
 footer {
     height: 50px;
@@ -28,15 +30,48 @@ footer {
     bottom: 0;
     width: 100%;
 }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+#nav1-wrapper {
+    display: flex;
+    width: 50%;
+}
+#nav2-wrapper {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+#nav1 ul a {
+    padding-left: 15px;
+}
+#nav2 ul a {
+    padding-right: 15px;
+}
+ul a {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-family: arial;
+    font-size: small;
+    opacity: 0.75;
+}
 #logo-search {
-transform: translateY(80%);
+transform: translateY(45%);
+display: flex;
+flex-direction: column;
 }
 #logo {
     text-align: center;
 }
 #search-wrapper {
     position: relative;
-    width: 575px;
+    width: 475px;
     min-width: 100px;
     margin: 0 auto;
 }
@@ -64,7 +99,7 @@ input:focus {
 #mic-icon {
     position: absolute;
     top: 44px;
-    left: 543px;
+    left: 445px;
     font-size: 18px;
 
 }
@@ -80,6 +115,7 @@ button {
     font-size: 14px;
     background-color: #f8f9fa;
     color: #3c4043;
+    font-family: Roboto;
 }
 #button-search {
 margin-right: 5px;
@@ -91,7 +127,25 @@ margin-left: 5px;
     </head>
     <body>
         <main>
-        <header></header>
+        <header>
+        <div id="nav1-wrapper">
+            <nav id="nav1">
+                <ul>
+                    <li><a href="#logo-search">About</a></li>
+                    <li><a href="#logo-search">Store</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="nav2-wrapper">
+            <nav id="nav2">
+                <ul>
+                    <li><a href="#logo-search">Gmail</a></li>
+                    <li><a href="#logo-search">Images</a></li>
+                    <img id-="9-squares-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEUCAgL///8AAAC8vLxmZmY3NzcwMDDCwsLExMT7+/vv7+9RUVHV1dXc3Nz4+Pjo6Oh3d3eDg4M+Pj4ODg6SkpIrKytbW1tLS0uZmZkZGRmnp6fX19d7e3uBgYFpaWmJiYmhoaHNzc2xsbElJSUdHR0TExNfX19DQ0OlHaA3AAAEbElEQVR4nO2d2XLiQAxF2wKbzQazmQAhLEnI///hYEJlnrqNbgYNDfdWZd58Soelpgqp1S559Lj6n8MxzRSZlPtGbn+70CCzxbbfyNyXEw0yPR4uhuupqDMYhot50SPlJYwcDvTI6bo2zEWcOrLsharZAEyRTQjZWyJlSp64HiJ4evYtUE0XQjrpBphvWJmSuBVYjRT+alKQmfqRBfZGOFm5AfakC3xtRmg1MvIyX9AyB6c/8NHSW00HRIY+piVa5hQVdNL2VtOCmS0vsw0zwefiMcRDQ4hJQ9PQEGLS0DQ0hJg0NA0NISYNTUNDiElD09AQYtLQNDSEmDQ0DQ0hJg1NQ0OISUPT0BBi0tA0NISYNDQNDSEmDU1DQ4hJQ9PQEGLexPDxp76m/35yDxwvvdXk3uNPX95igjYDmZkf+YsJWnQK2v81hAdMpRNgYl/Eego6WUNT5+/BSfYxxByHkL13iLmuTyPkH/ox/+o/nEao9MiP/HKipNVONfkq83Axp/RnAxVzMGs+UZKXExWzff7PxzVyYw8N4w8N4w8N4w8N4w8N4w8N4w8N4w8N4w8N4w8N4w8N48+zGI72HUXy5h9vk6RXdBXIbhHsElzSzzVl7kc/hq259tfyQaDx9O23Vf8Cv21yLNRLhuatb8M30fY8Tg8cgsWMPtVtFJFPf/ewzgop8602fEXaVhLcB9SDeucyDb2LXagLKK+JA1uPMg1UMwb7h6H2GtaNFyncBm0f+9uZYNP1VI7/TUSnH2Ts5vCj3mpyeFLB37UDPxZO5vi0iX/Z151Nm6CJZZ4GDw0hJg1NQ0OISUPT0BBi0tA0NISYNDQNDSEmDU1DQ4hJQ9PQEGLS0DQ0hJg0NA0NISYNTUNDiElD09AQYtLQNDSEmDQ0DQ0hJg1NQ0OISUOMij5nO9eGXWFZM59gNhEaEXbB13t4T/OlrzeZEQancoOXyeIzwreY8x5ic94utNYHnPPe1LP6R2QIfhUo5rztSz+rH9j0VQea1T8+yXmL+jXXnEXpdK86M7NWMddXnZnRHMPpdP6emXns0DD+0DD+0DD+0DD+0DD+0DD+0DD+0DD+0DD+0DD+0DD+PIlhq71Q7cC/aq9+pVmCP6mu2quv2tW/+NmrX9zgboSdHim7MBK6G6FI7up+i20I+Yv7LcD+ob/JDXfCgh07rM1d31FyQPu1gV7YBGRO/Ej4dp7DE9wV9Pj3PcHVRDJPwy1KgWpoiDBpaBoaQkwamoaGEJOGpqEhxKShaWgIMWloGhpCTBqahoYQk4amoSHEpKFpaAgxaWgaGkJMGpqGhhCThqahIcSkoWloCDFpaBoaQsz72jEUiaE8weRe9eDTl5Vb3WCCNgWZqR8Jv2orlyyx8WL/hzRJ9uAU9D7AxD6mskxcAi2KkixQTJLMoKnzWZCZIWVKcT6NoF4xJNJuOI2w0iMbFjMlw7YeOS8uJ0o6ZZop8rVtWqJ0qmdXaZBZtWt4zU4ptl8aZFqeL/R9/FNBfwBQYI6DhEBzvgAAAABJRU5ErkJggg==" alt="">
+                </ul>
+            </nav>
+        </div>
+        </header>
         <div id="logo-search">
        <div id="logo"><img src="https://web.archive.org/web/20191130234759im_/https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo"></div>
         <div id="search-wrapper">
