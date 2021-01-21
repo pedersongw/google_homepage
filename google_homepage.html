@@ -17,18 +17,27 @@ main {
     box-sizing: border-box;
 }
 header {
-    height: 50px;
+    height: 60px;
     position: absolute;
     top: 0;
     width: 100%;
     display: flex;
 }
 footer {
-    height: 50px;
-    background-color: lightgray;
+    height: 40px;
+    background-color: #f2f2f2;;
+    display: flex;
     position: absolute;
     bottom: 0;
     width: 100%;
+    border: 1px solid;
+    border-color: lightgray;
+}
+.header-nav {
+    display: flex;
+}
+.header-nav ul {
+    align-self: center;
 }
 nav ul {
     list-style: none;
@@ -38,19 +47,21 @@ nav ul {
     align-items: center;
     height: 50px;
 }
-#nav1-wrapper {
+#nav1-wrapper, #nav2-wrapper {
     display: flex;
     width: 50%;
+    height: 100%;
 }
-#nav2-wrapper {
-    display: flex;
-    width: 50%;
+#nav2-wrapper, #nav4-wrapper {
     justify-content: flex-end;
 }
-#nav1 ul a {
+.header-nav ul a {
     padding-left: 15px;
 }
-#nav2 ul a {
+#nav1-a1 {
+    margin: 15px;
+}
+#nav2 ul .nav2-a, #nav4 a {
     padding-right: 15px;
 }
 ul a {
@@ -59,10 +70,24 @@ ul a {
     color: black;
     font-family: arial;
     font-size: small;
+}
+#nav1 a, #nav2 a {
     opacity: 0.75;
 }
+ul a:hover {
+    text-decoration: underline;
+}
+#squares-icon {
+    width: 17px;
+    padding-right: 15px;
+}
+#flower-img {
+    width: 32px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
 #logo-search {
-transform: translateY(45%);
+transform: translateY(65%);
 display: flex;
 flex-direction: column;
 }
@@ -123,25 +148,46 @@ margin-right: 5px;
 #button-lucky {
 margin-left: 5px;
 }
+#nav3 a, #nav4 a {
+    color: #70757a;
+    font-size: 14px;
+}
+#nav3-wrapper, #nav4-wrapper {
+    display: flex;
+    width: 50%;
+}
+#nav3 a {
+    padding-left: 27px;
+}
+#nav4 a {
+    padding-right: 27px;
+}
+.footer-nav ul {
+    align-self: center;
+}
+.footer-nav {
+    display: flex;
+}
 </style>
     </head>
     <body>
         <main>
         <header>
         <div id="nav1-wrapper">
-            <nav id="nav1">
+            <nav class="header-nav" id="nav1">
                 <ul>
-                    <li><a href="#logo-search">About</a></li>
+                    <li><a id="nav1-a1" href="#logo-search">About</a></li>
                     <li><a href="#logo-search">Store</a></li>
                 </ul>
             </nav>
         </div>
         <div id="nav2-wrapper">
-            <nav id="nav2">
+            <nav class="header-nav" id="nav2">
                 <ul>
-                    <li><a href="#logo-search">Gmail</a></li>
-                    <li><a href="#logo-search">Images</a></li>
-                    <img id-="9-squares-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEUCAgL///8AAAC8vLxmZmY3NzcwMDDCwsLExMT7+/vv7+9RUVHV1dXc3Nz4+Pjo6Oh3d3eDg4M+Pj4ODg6SkpIrKytbW1tLS0uZmZkZGRmnp6fX19d7e3uBgYFpaWmJiYmhoaHNzc2xsbElJSUdHR0TExNfX19DQ0OlHaA3AAAEbElEQVR4nO2d2XLiQAxF2wKbzQazmQAhLEnI///hYEJlnrqNbgYNDfdWZd58Soelpgqp1S559Lj6n8MxzRSZlPtGbn+70CCzxbbfyNyXEw0yPR4uhuupqDMYhot50SPlJYwcDvTI6bo2zEWcOrLsharZAEyRTQjZWyJlSp64HiJ4evYtUE0XQjrpBphvWJmSuBVYjRT+alKQmfqRBfZGOFm5AfakC3xtRmg1MvIyX9AyB6c/8NHSW00HRIY+piVa5hQVdNL2VtOCmS0vsw0zwefiMcRDQ4hJQ9PQEGLS0DQ0hJg0NA0NISYNTUNDiElD09AQYtLQNDSEmDQ0DQ0hJg1NQ0OISUPT0BBi0tA0NISYNDQNDSEmDU1DQ4hJQ9PQEGLexPDxp76m/35yDxwvvdXk3uNPX95igjYDmZkf+YsJWnQK2v81hAdMpRNgYl/Eego6WUNT5+/BSfYxxByHkL13iLmuTyPkH/ox/+o/nEao9MiP/HKipNVONfkq83Axp/RnAxVzMGs+UZKXExWzff7PxzVyYw8N4w8N4w8N4w8N4w8N4w8N4w8N4w8N4w8N4w8N4w8N48+zGI72HUXy5h9vk6RXdBXIbhHsElzSzzVl7kc/hq259tfyQaDx9O23Vf8Cv21yLNRLhuatb8M30fY8Tg8cgsWMPtVtFJFPf/ewzgop8602fEXaVhLcB9SDeucyDb2LXagLKK+JA1uPMg1UMwb7h6H2GtaNFyncBm0f+9uZYNP1VI7/TUSnH2Ts5vCj3mpyeFLB37UDPxZO5vi0iX/Z151Nm6CJZZ4GDw0hJg1NQ0OISUPT0BBi0tA0NISYNDQNDSEmDU1DQ4hJQ9PQEGLS0DQ0hJg0NA0NISYNTUNDiElD09AQYtLQNDSEmDQ0DQ0hJg1NQ0OISUOMij5nO9eGXWFZM59gNhEaEXbB13t4T/OlrzeZEQancoOXyeIzwreY8x5ic94utNYHnPPe1LP6R2QIfhUo5rztSz+rH9j0VQea1T8+yXmL+jXXnEXpdK86M7NWMddXnZnRHMPpdP6emXns0DD+0DD+0DD+0DD+0DD+0DD+0DD+0DD+0DD+0DD+0DD+PIlhq71Q7cC/aq9+pVmCP6mu2quv2tW/+NmrX9zgboSdHim7MBK6G6FI7up+i20I+Yv7LcD+ob/JDXfCgh07rM1d31FyQPu1gV7YBGRO/Ej4dp7DE9wV9Pj3PcHVRDJPwy1KgWpoiDBpaBoaQkwamoaGEJOGpqEhxKShaWgIMWloGhpCTBqahoYQk4amoSHEpKFpaAgxaWgaGkJMGpqGhhCThqahIcSkoWloCDFpaBoaQsz72jEUiaE8weRe9eDTl5Vb3WCCNgWZqR8Jv2orlyyx8WL/hzRJ9uAU9D7AxD6mskxcAi2KkixQTJLMoKnzWZCZIWVKcT6NoF4xJNJuOI2w0iMbFjMlw7YeOS8uJ0o6ZZop8rVtWqJ0qmdXaZBZtWt4zU4ptl8aZFqeL/R9/FNBfwBQYI6DhEBzvgAAAABJRU5ErkJggg==" alt="">
+                    <li><a class="nav2-a" href="#logo-search">Gmail</a></li>
+                    <li><a class="nav2-a" href="#logo-search">Images</a></li>
+                    <a href="#logo-search"><img id="squares-icon" src="https://image.flaticon.com/icons/png/512/80/80975.png" alt=""></a>
+                    <a href="#logo-search"><img id="flower-img" src="https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg" alt=""></a>
                 </ul>
             </nav>
         </div>
@@ -157,7 +203,25 @@ margin-left: 5px;
             <button id="button-search" type="button">Google Search</button>
             <button id="button-lucky" type="button">I'm Feeling Lucky</button>
         </div></div>
-        <footer></footer>
+        <footer>
+            <div id="nav3-wrapper">
+                <nav class="footer-nav" id="nav3">
+                    <ul>
+                        <li><a href="#logo-search">Advertising</a></li>
+                        <li><a href="#logo-search">Business</a></li>
+                        <li><a href="#logo-search">How Search Works</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="nav4-wrapper">
+                <nav class="footer-nav" id="nav4">
+                    <ul>
+                        <li><a href="#logo-search">Privacy</a></li>
+                        <li><a href="#logo-search">Terms</a></li>
+                        <li><a href="#logo-search">Settings</a></li>
+                    </ul>
+                </nav>
+        </footer>
         </main>
     </body>
 </html>
