@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Google Homepage</title>
+        <script src="https://kit.fontawesome.com/23b3e6bf4c.js" crossorigin="anonymous"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+}
+main {
+    position: relative;
+    height: 100vh;
+    padding-bottom: 50px;
+    overflow: hidden;
+    display: block;
+    box-sizing: border-box;
+}
+header {
+    height: 50px;
+    background-color: lightgray;
+}
+footer {
+    height: 50px;
+    background-color: lightgray;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#logo-search {
+transform: translateY(80%);
+}
+#logo {
+    text-align: center;
+}
+#search-wrapper {
+    position: relative;
+    width: 575px;
+    min-width: 100px;
+    margin: 0 auto;
+}
+#search {
+width: 100%;
+margin: 32px 0;
+border-radius: 25px;
+height: 45px;
+border: 1px solid;
+border-color: lightgray;
+padding: 0 50px;
+}
+input:focus {
+    outline: none;
+}
+.icon {
+    color: rgb(170, 170, 170);
+}
+#search-icon {
+    position: absolute;
+    top: 46px;
+    left: 18px;
+    font-size: 15px;
+}
+#mic-icon {
+    position: absolute;
+    top: 44px;
+    left: 543px;
+    font-size: 18px;
+
+}
+#button-wrapper {
+    text-align: center;
+}
+button {
+    border: none;
+    padding: 0 16px;
+    border-radius: 4px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    color: #3c4043;
+}
+#button-search {
+margin-right: 5px;
+}
+#button-lucky {
+margin-left: 5px;
+}
+</style>
+    </head>
+    <body>
+        <main>
+        <header></header>
+        <div id="logo-search">
+       <div id="logo"><img src="https://web.archive.org/web/20191130234759im_/https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo"></div>
+        <div id="search-wrapper">
+            <div id="search-icon" class="icon"><i class="fas fa-search"></i></div>
+            <input id="search" type="text">
+            <div id="mic-icon" class="icon"><i class="fas fa-microphone"></i></div>
+        </div>
+        <div id="button-wrapper">
+            <button id="button-search" type="button">Google Search</button>
+            <button id="button-lucky" type="button">I'm Feeling Lucky</button>
+        </div></div>
+        <footer></footer>
+        </main>
+    </body>
+</html>
